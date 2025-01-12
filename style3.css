@@ -1,0 +1,343 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ddd7d785;
+}
+
+/* Header Image Banner Section with Sliding Effect */
+.header-banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; /* Smaller banner size */
+    perspective: 1000px; /* Apply 3D perspective to the banner */
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
+}
+
+.carousel-slide {
+    width: 100%; /* 1 image per slide */
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth transition for sliding */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: scale(1.1); /* Slightly scale up the images to fit better */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* 3D Effect */
+.carousel-slide:hover img {
+    transform: scale(1.2) rotateY(10deg); /* Apply 3D scaling and rotation effect on hover */
+}
+
+.header-banner .carousel-slide {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-banner .carousel-slide img {
+    border-radius: 10px; /* Optional: Add border radius for smooth corners */
+}
+
+
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .header-banner {
+        height: 120px; /* Smaller height for mobile screens */
+    }
+    .carousel-slide img {
+        transform: scale(1); /* Remove scaling for small devices */
+    }
+}
+
+
+
+/* About Section */
+.about, .mission, .team, .contact {
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.about h1, .mission h2, .team h2, .contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p, .mission p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.team h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+/* Styling for Our Vision Section */
+.vision {   
+    background-color: #adb8b867;  /* A light background color */
+    padding: 50px 0;
+    text-align: center;
+    border-radius: 35px;
+    box-shadow: 1px 2px 10px rgba(3, 0, 0, 0.973);
+}
+
+.vision h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.vision p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Team Section */
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: #fff;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 2px 10px rgb(100, 92, 92);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* General Styling */
+.elementor-section {
+    padding: 30px 10px;
+    background-color: #c7c6ce93;
+}
+
+.elementor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.elementor-column {
+    padding: 15px;
+    text-align: center;
+}
+
+.elementor-widget-heading h2, .elementor-widget-heading h3 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.elementor-widget-heading h2 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.elementor-widget-heading h3 {
+    font-size: 1.2rem;
+}
+
+.elementor-widget-counter {
+    margin-top: 10px;
+}
+
+.elementor-counter-number-wrapper {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Image Styling */
+.elementor-widget-image img {
+    width: 100%;
+    max-width: 200px; /* Small image size */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 5px 9px 10px rgba(68, 55, 55, 0.719);
+    margin-bottom: 20px;
+}
+
+/* Spacer */
+.elementor-widget-spacer {
+    margin: 30px 0;
+}
+
+.elementor-spacer-inner {
+    height: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .elementor-widget-heading h2 {
+        font-size: 1.6rem;
+    }
+
+    .elementor-widget-heading h3 {
+        font-size: 1.1rem;
+    }
+
+    .elementor-widget-image img {
+        max-width: 150px; /* Smaller images on tablets */
+    }
+
+    .elementor-counter-number-wrapper {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .elementor-section {
+        padding: 20px 10px;
+    }
+
+    .elementor-widget-heading h2 {
+        font-size: 1.4rem;
+    }
+
+    .elementor-widget-heading h3 {
+        font-size: 1rem;
+    }
+
+    .elementor-widget-image img {
+        max-width: 130px; /* Even smaller on small screens */
+    }
+
+    .elementor-widget-counter {
+        font-size: 1.2rem;
+    }
+
+    .elementor-column {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .elementor-section {
+        padding: 15px 5px;
+    }
+
+    .elementor-widget-heading h2 {
+        font-size: 1.2rem;
+    }
+
+    .elementor-widget-heading h3 {
+        font-size: 0.9rem;
+    }
+
+    .elementor-widget-image img {
+        max-width: 100px; /* Smallest image size */
+    }
+
+    .elementor-counter-number-wrapper {
+        font-size: 1.2rem;
+    }
+
+    .elementor-widget-counter {
+        font-size: 1rem;
+    }
+}
+
+
+/* Contact Section */
+.contact .btn {
+    background-color: #0c34a1;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact .btn:hover {
+    background-color: #4360b1;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .header-carousel {
+        flex-direction: column;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about h1, .mission h2, .team h2, .contact h2 {
+        font-size: 28px;
+    }
+
+    .about p, .mission p, .team-member h3 {
+        font-size: 16px;
+    }
+
+    .team-member {
+        width: 200px;
+    }
+}
